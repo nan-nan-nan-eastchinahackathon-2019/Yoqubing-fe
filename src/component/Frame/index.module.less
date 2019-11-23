@@ -31,11 +31,16 @@
       margin: 0 2em;
       flex: 1;
       height: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: space-between;
+      overflow-y: scroll;
     }
-  }
-
-  .container::-webkit-scrollbar {
-    display: none;
+    
+    .content::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 

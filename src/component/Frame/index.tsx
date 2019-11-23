@@ -8,7 +8,7 @@ export default function Frame(props: {WrappedComponent: any}) {
     <div className={styles.whole}>
       <div className={styles.container}>
         <Navigator />
-        <div className={styles.content}>
+        <div className={`${styles.content} ${styles.defaultBox}`}>
           {props.WrappedComponent}
         </div>
       </div>

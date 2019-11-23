@@ -8,8 +8,8 @@ import Login from "./Login";
 class User extends React.Component<RouteComponentProps, any> {
   render() {
     let component = (
-      <div>
-        个人
+      <div className={styles.whole}>
+        
       </div>
     );
     if (!window.localStorage.session) component = <Login/>
