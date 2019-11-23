@@ -11,7 +11,7 @@ class Main extends React.Component<RouteComponentProps, any> {
         <div>
           主页
         </div>
-      } />
+      } Boxed={true} />
     );
   }
 }

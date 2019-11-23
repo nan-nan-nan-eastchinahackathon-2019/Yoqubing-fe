@@ -51,7 +51,7 @@ class User extends React.Component<{meAction: Function, logoutAction: Function} 
       }
       component = (
         <div className={styles.whole}>
-          <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" style={{width: "10em", height: "10em", marginBottom: "2em"}}/>
+          <Avatar size="large" src="https://avatars3.githubusercontent.com/u/58063673?s=200&v=4" style={{width: "10em", height: "10em", marginBottom: "2em"}}/>
           {userItem("姓名", this.state.name)}
           {userItem("手机号", this.state.phone)}
           {userItem("年级", this.state.grade)}
@@ -64,7 +64,7 @@ class User extends React.Component<{meAction: Function, logoutAction: Function} 
         </div>
       );
     }
-    return <Frame WrappedComponent={component} />;
+    return <Frame WrappedComponent={component} Boxed={true} />;
   }
 }
 
