@@ -43,6 +43,11 @@ class Login extends React.Component<{loginAction: Function, registerAction: Func
       if (res.code === 0) {
         this.props.registerAction();
         message.success("注册成功！");
+        let state = this.state;
+        state.login.username = state.register.username;
+        state.login.password = state.register.password;
+        this.setState(state);
+        this.handleLogin();
       }
       else {
         message.error("用户名已存在！");
