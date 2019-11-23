@@ -5,12 +5,12 @@ import { RouteComponentProps } from "react-router";
 import Frame from "../../component/Frame";
 import { me } from "../../service/UserAPI";
 import { bindActionCreators } from "redux";
-import { meAction } from "../../action/UserAction";
+import { meAction, logoutAction } from "../../action/UserAction";
 import { connect } from "react-redux";
 import store from "../../store";
 import { Spin, Avatar } from "antd";
 
-class User extends React.Component<{meAction: Function} & RouteComponentProps, any> {
+class User extends React.Component<{meAction: Function, logoutAction: Function} & RouteComponentProps, any> {
   unsubscribe = store.subscribe(() => {
     this.setState(store.getState().UserReducer.information);
   });
@@ -26,6 +26,9 @@ class User extends React.Component<{meAction: Function} & RouteComponentProps, a
         this.props.meAction(res.data);
       }
     });
+  }
+  handleLogout = () => {
+    this.props.logoutAction();
   }
   render() {
     if (!window.localStorage.session) this.props.history.push("/user/login");
@@ -55,6 +58,9 @@ class User extends React.Component<{meAction: Function} & RouteComponentProps, a
           {userItem("专业", this.state.major)}
           {userItem("信誉分", this.state.score)}
           {userItem("余额", this.state.balance)}
+          <div className={`${styles.items} ${styles.button}`} onClick={this.handleLogout}>
+            <div>登 出</div>
+          </div>
         </div>
       );
     }
@@ -69,6 +75,7 @@ const mapStateToProps = (state : any) => {
 const mapDispatchToProps = (dispatch : any) => {
   return {
     meAction: bindActionCreators(meAction, dispatch),
+    logoutAction: bindActionCreators(logoutAction, dispatch),
   };
 }
 
