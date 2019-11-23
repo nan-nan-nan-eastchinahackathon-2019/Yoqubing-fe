@@ -6,11 +6,12 @@ import Resource from "../container/Resource";
 import Order from "../container/Order";
 import User from "../container/User";
 import Wall from "../container/Wall";
+import Login from "../container/User/Login";
 
 export default [
   <Route component={ Main } exact path="/" />,
   <Route component={ User } exact path="/user" />,
-  <Route component={ User } exact path="/user/:pos" />,
+  <Route component={ Login } exact path="/user/login" />,
   <Route component={ Wall } exact path="/wall" />,
   <Route component={ Resource } exact path="/resource" />,
   <Route component={ Order } exact path="/order" />

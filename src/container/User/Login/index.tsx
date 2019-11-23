@@ -6,6 +6,7 @@ import { loginAction, registerAction } from "../../../action/UserAction";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { RouteComponentProps, withRouter } from "react-router";
+import Frame from "../../../component/Frame";
 
 class Login extends React.Component<{loginAction: Function, registerAction: Function} & RouteComponentProps, any> {
   constructor(props: any) {
@@ -56,7 +57,7 @@ class Login extends React.Component<{loginAction: Function, registerAction: Func
   }
   render() {
     const inputStyle = {marginTop: "1em", width: "100%"};
-    return (
+    const component = (
       <Row className={styles.whole}>
         <Col span={9}>
           <div className={styles.login}>登录</div>
@@ -77,6 +78,7 @@ class Login extends React.Component<{loginAction: Function, registerAction: Func
         </Col>
       </Row>
     );
+    return <Frame WrappedComponent={component} />;
   }
 }
 

@@ -7,15 +7,13 @@ import Login from "./Login";
 
 class User extends React.Component<RouteComponentProps, any> {
   render() {
-    let component = (
+    if (!window.localStorage.session) this.props.history.push("/user/login");
+    const component = (
       <div className={styles.whole}>
         
       </div>
     );
-    if (!window.localStorage.session) component = <Login/>
-    return (
-      <Frame WrappedComponent={component} />
-    );
+    return <Frame WrappedComponent={component} />;
   }
 }
 
