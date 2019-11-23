@@ -78,7 +78,7 @@ class Login extends React.Component<{loginAction: Function, registerAction: Func
         </Col>
       </Row>
     );
-    return <Frame WrappedComponent={component} />;
+    return <Frame WrappedComponent={component} Boxed={true} />;
   }
 }
 
