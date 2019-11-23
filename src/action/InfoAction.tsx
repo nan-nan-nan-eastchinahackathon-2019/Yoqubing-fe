@@ -18,7 +18,7 @@ export const cancelInfoAction = () => (dispatch : Function) => {
   });
 }
 
-export const getInfoListAction = (payload : {infos: [InfoList]}) => (dispatch : Function) => {
+export const getInfoListAction = (payload : {infos: InfoList[]}) => (dispatch : Function) => {
   dispatch({
     type: InfoActionType.GETINFOLIST,
     payload: payload,

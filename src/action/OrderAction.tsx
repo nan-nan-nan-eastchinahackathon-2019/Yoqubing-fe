@@ -27,14 +27,14 @@ export const finishOrderAction = () => (dispatch : Function) => {
   });
 }
 
-export const getMyOrderListAction = (payload : {orders: [FullOrder]}) => (dispatch : Function) => {
+export const getMyOrderListAction = (payload : {orders: FullOrder[]}) => (dispatch : Function) => {
   dispatch({
     type: OrderActionType.GETMYORDERLIST,
     payload: payload,
   });
 }
 
-export const getOrderListAction = (payload : {orders: [BriefOrder]}) => (dispatch : Function) => {
+export const getOrderListAction = (payload : {orders: BriefOrder[]}) => (dispatch : Function) => {
   dispatch({
     type: OrderActionType.GETORDERLIST,
     payload: payload,

@@ -18,7 +18,7 @@ export const removeResourceAction = () => (dispatch : Function) => {
   });
 }
 
-export const getResourceListAction = (payload : {resources: [ResourceList]}) => (dispatch : Function) => {
+export const getResourceListAction = (payload : {resources: ResourceList[]}) => (dispatch : Function) => {
   dispatch({
     type: ResourceActionType.GETRESOURCELIST,
     payload: payload,
