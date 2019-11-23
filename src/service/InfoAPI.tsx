@@ -11,11 +11,20 @@ interface cancelInfoBody {
   id: number,
 }
 
+export interface InfoList {
+  id: number,
+  title: string,
+  name: string,
+  content: string,
+  createtime: number,
+  uid: number,
+}
+
 export function login(body : publishBody) {
   return request(apiname + "/publish", body);
 }
 
-export function getInfoList() : Promise<{code: number, data: {id: number, title: string, name: string, content: string, createtime: number, uid: number}}> {
+export function getInfoList() : Promise<{code: number, data: {infos: [InfoList]} }> {
   return request(apiname + "/getInfoList");
 }
 

@@ -13,6 +13,17 @@ interface removeBody {
   id: number,
 }
 
+export interface ResourceList {
+  id: number,
+  name: string,
+  uid: number,
+  updatetime: number,
+  type:string,
+  url: string,
+  content: string,
+  uname: string,
+}
+
 export function upload(body : uploadBody) {
   return request(apiname + "/publish", body);
 }
@@ -21,6 +32,6 @@ export function remove(body : removeBody) {
   return request(apiname + "/remove", body);
 }
 
-export function getResourceList() : Promise<{code: number, data: {resources: [{id: number, name: string, uid: number, updatetime: number, type:string, url: string, content: string, uname: string}]}}> {
+export function getResourceList() : Promise<{code: number, data: {resources: []}}> {
   return request(apiname + "/getResourceList");
 }

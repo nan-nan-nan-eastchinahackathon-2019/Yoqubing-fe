@@ -16,7 +16,7 @@ interface idBody {
   id: number,
 }
 
-interface FullOrder {
+export interface FullOrder {
   id: number,
   title: string,
   name: string,
@@ -37,7 +37,7 @@ interface FullOrder {
   finishtime: number,
 }
 
-interface BriefOrder {
+export interface BriefOrder {
   id: number,
   title: string,
   name: string,
