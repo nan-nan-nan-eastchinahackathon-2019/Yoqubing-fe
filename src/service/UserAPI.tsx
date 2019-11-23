@@ -1,6 +1,6 @@
 import request from "../utiliy/request";
 
-const apiname = "/user";
+const apiname = "/account";
 
 interface loginBody {
   username : string,
