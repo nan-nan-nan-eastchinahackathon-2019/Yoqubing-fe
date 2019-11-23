@@ -10,6 +10,7 @@ import Wall from "../container/Wall";
 export default [
   <Route component={ Main } exact path="/" />,
   <Route component={ User } exact path="/user" />,
+  <Route component={ User } exact path="/user/:pos" />,
   <Route component={ Wall } exact path="/wall" />,
   <Route component={ Resource } exact path="/resource" />,
   <Route component={ Order } exact path="/order" />

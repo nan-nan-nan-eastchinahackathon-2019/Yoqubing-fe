@@ -7,7 +7,7 @@ export const UserActionType = {
   UPDATE: "UPDATE",
 }
 
-export const loginAction = (payload : {id: number, token: string, name: string}) => async (dispatch : Function) => {
+export const loginAction = (payload : {id: number, token: string, name: string}) => (dispatch : Function) => {
   dispatch({
     type: UserActionType.LOGIN,
     payload: payload,
@@ -15,33 +15,33 @@ export const loginAction = (payload : {id: number, token: string, name: string})
   window.localStorage.session = JSON.stringify(payload);
 }
 
-export const registerAction = () => async (dispatch : Function) => {
+export const registerAction = () => (dispatch : Function) => {
   dispatch({
     type: UserActionType.REGISTER,
   });
 }
 
-export const logoutAction = () => async (dispatch : Function) => {
+export const logoutAction = () => (dispatch : Function) => {
   dispatch({
     type: UserActionType.LOGOUT,
   });
   window.localStorage.removeItem("session");
 }
 
-export const meAction = (payload : {id: number, name: string, phone: string, grade: string, major: string, score: number, username: string, balance: number}) => async (dispatch : Function) => {
+export const meAction = (payload : {id: number, name: string, phone: string, grade: string, major: string, score: number, username: string, balance: number}) => (dispatch : Function) => {
   dispatch({
     type: UserActionType.ME,
     payload: payload,
   });
 }
 
-export const passwordAction = () => async (dispatch : Function) => {
+export const passwordAction = () => (dispatch : Function) => {
   dispatch({
     type: UserActionType.PASSWORD,
   });
 }
 
-export const updateAction = () => async (dispatch : Function) => {
+export const updateAction = () => (dispatch : Function) => {
   dispatch({
     type: UserActionType.UPDATE,
   });

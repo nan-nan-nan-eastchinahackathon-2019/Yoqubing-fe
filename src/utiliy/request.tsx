@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const server = "";
+const server = "https://mockapi.eolinker.com/nKCmgxNb9dc40f3a1b2e6652aeacaae2bb186d2d2bec7d5";
 
 const withToken = (body : any) : any => {
   if (!body) body = {};
@@ -8,9 +8,9 @@ const withToken = (body : any) : any => {
   return {...body, token: JSON.parse(window.localStorage.session).token};
 }
 
-export default function request(url : string, body ?: any) : any {
+export default async function request(url : string, body ?: any) {
   body = withToken(body);
-  return axios({
+  return await axios({
     method: "POST",
     headers: { "Content-type": "application/json" },
     url: server + url,
