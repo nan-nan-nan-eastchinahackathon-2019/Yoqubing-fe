@@ -24,7 +24,7 @@ export function login(body : publishBody) {
   return request(apiname + "/publish", body);
 }
 
-export function getInfoList() : Promise<{code: number, data: {infos: [InfoList]} }> {
+export function getInfoList() : Promise<{code: number, data: {infos: InfoList[]} }> {
   return request(apiname + "/getInfoList");
 }
 

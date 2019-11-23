@@ -32,6 +32,6 @@ export function remove(body : removeBody) {
   return request(apiname + "/remove", body);
 }
 
-export function getResourceList() : Promise<{code: number, data: {resources: []}}> {
+export function getResourceList() : Promise<{code: number, data: {resources: ResourceList[]}}> {
   return request(apiname + "/getResourceList");
 }

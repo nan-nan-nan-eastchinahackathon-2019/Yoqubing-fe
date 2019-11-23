@@ -68,10 +68,10 @@ export function getOrderById(body : idBody) : Promise<{code: number, data: FullO
   return request(apiname + "/getOrderById", body);
 }
 
-export function getMyOrderList() : Promise<{code: number, data: {orders: [FullOrder]}}> {
+export function getMyOrderList() : Promise<{code: number, data: {orders: FullOrder[]}}> {
   return request(apiname + "/getMyOrderList");
 }
 
-export function getOrderList() : Promise<{code: number, data: {orders: [BriefOrder]}}> {
+export function getOrderList() : Promise<{code: number, data: {orders: BriefOrder[]}}> {
   return request(apiname + "/getOrderList");
 }
