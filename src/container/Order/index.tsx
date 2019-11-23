@@ -4,16 +4,16 @@ import { RouteComponentProps } from "react-router";
 
 import Frame from "../../component/Frame";
 
-class Main extends React.Component<RouteComponentProps, any> {
+class Order extends React.Component<RouteComponentProps, any> {
   render() {
     return (
       <Frame WrappedComponent={
         <div>
-          主页
+          跑腿
         </div>
       } />
     );
   }
 }
 
-export default Main;
+export default Order;

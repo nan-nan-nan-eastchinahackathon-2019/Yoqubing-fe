@@ -7,7 +7,9 @@ import { LocationDescriptor } from "history";
 class NavigatorButton extends React.Component<{title: string, icon: any, href: LocationDescriptor<any>} & RouteComponentProps, any> {
   render() {
     let className = styles.defaultBox + " " + styles.navButton;
-    if (this.props.location.pathname.indexOf(this.props.href.toString()) !== -1) className += " " + styles.activeButton;
+    if (this.props.location.pathname.indexOf(this.props.href.toString()) !== -1 && !(this.props.href.toString() === "/" && this.props.location.pathname !== "/")) {
+      className += " " + styles.activeButton;
+    }
     return (
       <Tooltip title={this.props.title} placement="left">
         <NavLink to={this.props.href}>
