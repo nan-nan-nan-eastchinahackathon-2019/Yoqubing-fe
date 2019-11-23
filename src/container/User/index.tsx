@@ -51,15 +51,17 @@ class User extends React.Component<{meAction: Function, logoutAction: Function} 
       }
       component = (
         <div className={styles.whole}>
-          <Avatar size="large" src="https://avatars3.githubusercontent.com/u/58063673?s=200&v=4" style={{width: "10em", height: "10em", marginBottom: "2em"}}/>
-          {userItem("姓名", this.state.name)}
-          {userItem("手机号", this.state.phone)}
-          {userItem("年级", this.state.grade)}
-          {userItem("专业", this.state.major)}
-          {userItem("信誉分", this.state.score)}
-          {userItem("余额", this.state.balance)}
-          <div className={`${styles.items} ${styles.button}`} onClick={this.handleLogout}>
-            <div>登 出</div>
+          <div className={styles.info}>
+            <Avatar size="large" src="https://avatars3.githubusercontent.com/u/58063673?s=200&v=4" style={{width: "10em", height: "10em", marginBottom: "2em"}}/>
+            {userItem("姓名", this.state.name)}
+            {userItem("手机号", this.state.phone)}
+            {userItem("年级", this.state.grade)}
+            {userItem("专业", this.state.major)}
+            {userItem("信誉分", this.state.score)}
+            {userItem("余额", this.state.balance)}
+            <div className={`${styles.items} ${styles.button}`} onClick={this.handleLogout}>
+              <div>登 出</div>
+            </div>
           </div>
         </div>
       );
