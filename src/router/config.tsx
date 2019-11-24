@@ -7,6 +7,7 @@ import Order from "../container/Order";
 import User from "../container/User";
 import Wall from "../container/Wall";
 import Login from "../container/User/Login";
+import MyOrder from "../container/MyOrder";
 
 export default [
   <Route component={ Main } exact path="/" />,
@@ -14,5 +15,6 @@ export default [
   <Route component={ Login } exact path="/user/login" />,
   <Route component={ Wall } exact path="/wall" />,
   <Route component={ Resource } exact path="/resource" />,
-  <Route component={ Order } exact path="/order" />
+  <Route component={ Order } exact path="/order" />,
+  <Route component={ MyOrder } exact path="/myorder" />
 ];
