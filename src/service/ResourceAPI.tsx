@@ -25,7 +25,7 @@ export interface ResourceList {
 }
 
 export function upload(body : uploadBody) {
-  return request(apiname + "/publish", body);
+  return request(apiname + "/upload", body);
 }
 
 export function remove(body : removeBody) {
