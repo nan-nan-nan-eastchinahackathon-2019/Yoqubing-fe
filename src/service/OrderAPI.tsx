@@ -52,16 +52,20 @@ export interface BriefOrder {
   content: string,
 }
 
-export function publish(body : publishBody) {
+export function publishOrder(body : publishBody) {
   return request(apiname + "/publish", body);
 }
 
-export function cancel(body : idBody) {
-  return request(apiname + "/publish", body);
+export function cancelOrder(body : idBody) {
+  return request(apiname + "/cancel", body);
 }
 
-export function finish(body : idBody) {
+export function finishOrder(body : idBody) {
   return request(apiname + "/finish", body);
+}
+
+export function acceptOrder(body : idBody) {
+  return request(apiname + "/accept", body);
 }
 
 export function getOrderById(body : idBody) : Promise<{code: number, data: FullOrder}> {
