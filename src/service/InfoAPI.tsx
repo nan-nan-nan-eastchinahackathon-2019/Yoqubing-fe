@@ -20,7 +20,7 @@ export interface InfoList {
   uid: number,
 }
 
-export function login(body : publishBody) {
+export function publishInfo(body : publishBody) {
   return request(apiname + "/publish", body);
 }
 
